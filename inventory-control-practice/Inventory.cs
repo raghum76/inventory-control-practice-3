@@ -60,6 +60,9 @@ namespace inventory_control_practice
             if (_initProduct != null)
             {
                 for (Product temp = _initProduct; temp.next != null; temp = temp.next)
+                    //Si tienes nombres con todas las letras del abecedario de la a a la z excepto la b y decides buscar
+                    //"bote" realizarás una busqueda en toda la lista, siendo que al estar ordenada cuando llegas a la "c" 
+                    //deberías saber que ya no tiene caso buscar.
                 {
                     if (temp.next.name == name)
                         return temp;
